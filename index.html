@@ -1,0 +1,237 @@
+<!doctype html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>HOLY — $HOMIE</title>
+  <meta name="description" content="HOLY — токен $HOMIE. Миссия, FAQ и ссылка на покупку." />
+  <meta property="og:title" content="HOLY — $HOMIE" />
+  <meta property="og:description" content="Мем‑культура, сообщество и $HOMIE." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://www.holymeme.com/" />
+  <meta property="og:image" content="/images/og-image.jpg" />
+  <meta name="theme-color" content="#fbbf24" />
+  <link rel="icon" href="images/penis.png" />
+  <style>
+    :root{
+      --bg-0:#0a0a0b; --bg-1:#0d0d10; --text:#ffffff; --muted:#d4d4d8;
+      --card:rgba(255,255,255,.05); --border:rgba(255,255,255,.12);
+      --accent:#fbbf24; --accent-2:#fde68a; --shadow:0 10px 30px rgba(0,0,0,.35);
+      --radius:18px; --space:clamp(16px, 2vw, 24px);
+    }
+    *{box-sizing:border-box}
+    html{scroll-behavior:smooth}
+    body{margin:0; font-family:ui-sans-serif,system-ui,Segoe UI,Roboto,Inter,Arial; color:var(--text); background:linear-gradient(180deg,var(--bg-0),#000);}    
+    .container{width:min(1200px, 100% - 32px); margin-inline:auto}
+    header{position:sticky; top:0; z-index:50; backdrop-filter:saturate(140%) blur(8px); background:rgba(0,0,0,.4); border-bottom:1px solid var(--border)}
+    nav a{color:#e5e5e5; text-decoration:none; font-size:14px}
+    nav a:hover{color:var(--accent)}
+    .btn{display:inline-flex; align-items:center; gap:.5rem; padding:.8rem 1.1rem; border-radius:14px; border:1px solid var(--border); background:var(--card); color:var(--text); text-decoration:none; font-weight:600}
+    .btn:hover{background:rgba(255,255,255,.08)}
+    .btn.primary{background:var(--accent); color:#000; border-color:transparent}
+    .btn.primary:hover{background:#f59e0b}
+    .hero{position:relative; overflow:hidden}
+    .glow{position:absolute; inset:-25% -10% auto -10%; height:520px; background:radial-gradient(600px 300px at 50% 0, rgba(255,255,255,.08), rgba(255,255,255,0)); pointer-events:none}
+    .grid{display:grid; gap:clamp(20px, 3vw, 40px)}
+    @media (min-width: 880px){ .grid-2{grid-template-columns:1.05fr .95fr} }
+    h1{font-size:clamp(36px, 6vw, 64px); line-height:1.05; margin:0}
+    h2{font-size:clamp(28px, 4.5vw, 40px); line-height:1.1; margin:0 0 10px}
+    p{color:var(--muted); font-size:clamp(15px, 1.7vw, 18px);}
+    .card{border:1px solid var(--border); background:var(--card); border-radius:var(--radius); box-shadow:var(--shadow)}
+    .art{aspect-ratio:1/1; width:100%; border-radius:24px; overflow:hidden; border:1px solid var(--border)}
+    .art img{width:100%; height:100%; object-fit:cover; display:block}
+    .art-grid{display:grid; grid-template-columns:1fr 1fr; gap:12px}
+    .faq{display:grid; gap:12px}
+    details{border:1px solid var(--border); background:var(--card); border-radius:16px; padding:14px 16px}
+    details>summary{cursor:pointer; list-style:none; display:flex; align-items:center; justify-content:space-between; gap:12px; font-weight:600}
+    details>summary::-webkit-details-marker{display:none}
+    .muted{color:#a1a1aa; font-size:13px}
+    footer{border-top:1px solid var(--border); background:rgba(0,0,0,.5)}
+    .badge{display:inline-block; padding:.3rem .6rem; background:#111827; border:1px solid var(--border); border-radius:999px; font-size:12px; color:#e5e7eb}
+    .row{display:flex; gap:10px; flex-wrap:wrap; align-items:center}
+    .space{padding-block:clamp(42px, 8vw, 96px)}
+    .copy{display:flex; gap:10px; align-items:center; flex-wrap:wrap}
+    .code{display:block; font-family:ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; background:#0b0b0e; color:#e5e7eb; border:1px solid var(--border); padding:.7rem .9rem; border-radius:12px; max-width:100%; overflow:auto}
+    .icon{width:18px; height:18px; display:inline-block; vertical-align:middle}
+    .hide-mobile{display:none}
+    @media (min-width:720px){.hide-mobile{display:inline-flex}}
+    @media (prefers-reduced-motion:no-preference){
+      .reveal{opacity:0; transform:translateY(12px); animation:reveal .65s ease forwards}
+      @keyframes reveal{to{opacity:1; transform:none}}
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div class="container" style="display:flex; align-items:center; justify-content:space-between; padding:10px 0;">
+      <a href="#top" style="text-decoration:none; color:var(--text); font-weight:900; letter-spacing:.5px; font-size:18px">HOLY <span style="color:var(--accent)">MEME</span> <span class="badge" aria-label="ticker">$HOMIE</span></a>
+      <nav class="hide-mobile" aria-label="Главное меню" style="display:flex; gap:22px">
+        <a href="#about">About</a>
+        <a href="#mission">Mission</a>
+        <a href="#faq">FAQ</a>
+        <a href="#buy">Buy</a>
+      </nav>
+      <div class="row">
+        <a class="btn" href="https://x.com/holyhomie_sol" target="_blank" rel="noopener"> 
+          <svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M18.244 2h3.308l-7.227 8.26L22 22h-6.59l-5.159-6.7L3.93 22H.62l7.73-8.84L2 2h6.73l4.662 6.123L18.244 2Zm-1.155 18h1.833L7.01 4h-1.9l11.979 16Z"/></svg>
+          <span>Follow</span>
+        </a>
+        <a class="btn primary" href="https://pump.fun" target="_blank" rel="noopener">
+          Buy $HOMIE
+          <svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M14 3h7v7h-2V6.41l-9.3 9.3-1.4-1.42 9.3-9.3H14V3ZM5 5h5v2H7v10h10v-3h2v5H5V5Z"/></svg>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero -->
+  <section id="top" class="hero space">
+    <div class="glow" aria-hidden="true"></div>
+    <div class="container grid grid-2">
+      <div class="reveal">
+        <h1>HOLY <span style="color:var(--accent)">$HOMIE</span></h1>
+        <p style="margin:16px 0 0">In the chaotic universe of memes, one image has emerged that has united meme lords and crypto enthusiasts alike: Holy. The humble hoodie-homey has evolved into a shrine of meme culture.</p>
+        <div class="row" style="margin-top:22px">
+          <a class="btn primary" href="https://pump.fun" target="_blank" rel="noopener">Buy $HOMIE
+            <svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M14 3h7v7h-2V6.41l-9.3 9.3-1.4-1.42 9.3-9.3H14V3ZM5 5h5v2H7v10h10v-3h2v5H5V5Z"/></svg>
+          </a>
+          <a class="btn" href="#contract">View Contract</a>
+        </div>
+      </div>
+      <div class="reveal">
+        <figure class="art">
+          <!-- Замените на ваш арт -->
+          <img src="holy1.jpg" alt="Holy artwork" />
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- About -->
+  <section id="about" class="space">
+    <div class="container grid grid-2">
+      <div class="reveal">
+        <h2>The Birth of $HOMIE</h2>
+        <p>What started as a humble meme character in a hoodie has become the Holy Meme — a grail of internet culture. Inspired by iconic imagery, $HOMIE is more than just a token — it’s a symbol of joy, creativity, and the power of memes to bring people together.
+
+Holy is more than a token. It’s proof that memes shape culture, challenge norms, and make crypto fun again.</p>
+        <p>Holy is more than a token. It’s proof that memes shape culture, challenge norms, and make crypto fun again.</p>
+      </div>
+      <div class="reveal">
+        <div class="art-grid">
+          <figure class="art"><img src="holy2.jpg" alt="Artwork 1" /></figure>
+          <figure class="art"><img src="holy3.jpg" alt="Artwork 2" /></figure>
+          
+          
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Mission -->
+  <section id="mission" class="space">
+    <div class="container">
+      <div class="card" style="padding: clamp(18px, 3vw, 32px)">
+        <h2>Our Mission</h2>
+        <p>We spread joy, build a strong and friendly community, and elevate memes to the status of true internet artifacts.</p>
+        <p>Join the movement and help shape the culture with $HOMIE.</p>
+        <div style="margin-top:14px">
+          <a class="btn primary" href="https://heaven.xyz/ideas" target="_blank" rel="noopener">Join Us — Buy $HOMIE</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- FAQ -->
+  <section id="faq" class="space">
+    <div class="container">
+      <h2>FAQ</h2>
+      <div class="faq" style="margin-top:16px">
+        <details>
+          <summary><span>What is Holy?</span><span aria-hidden="true">+</span></summary>
+          <div class="muted" style="margin-top:10px">Holy is the evolution of meme culture and the community around the $HOMIE token.</div>
+        </details>
+        <details>
+          <summary><span>How to buy $HOMIE?</span><span aria-hidden="true">+</span></summary>
+          <div class="muted" style="margin-top:10px">Create a wallet (eg Phantom), fund (SOL/USDC), go to DEX (Raydium) and exchange at the contract address (below). Always check the addresses!</div>
+        </details>
+        <details>
+          <summary><span>About tokenomics</span><span aria-hidden="true">+</span></summary>
+          <div class="muted" style="margin-top:10px">Total Supply: 1,000,000,000. Dev: 4.12% (marketing, development, CEX). No transaction taxes. Burn mechanics are possible.</div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- Buy / Contract -->
+  <section id="buy" class="space">
+    <div class="container">
+      <div class="card" style="padding: clamp(18px, 3vw, 28px)">
+        <div class="row" style="justify-content:space-between">
+          <div>
+            <h2 style="margin:0">Buy $HOMIE</h2>
+            <div class="muted" style="margin-top:6px"></div>
+          </div>
+          <div class="row">
+            <a class="btn primary" href="https://pump.fun" target="_blank" rel="noopener">Buy on DEX</a>
+            <a class="btn" href="https://x.com/holyhomie_sol" target="_blank" rel="noopener">Updates</a>
+          </div>
+        </div>
+        <div id="contract" style="margin-top:14px">
+          <div class="muted" style="text-transform:uppercase; letter-spacing:.08em">Contract Address</div>
+          <div class="copy" style="margin-top:8px">
+            <code class="code" id="addr"></code>
+            <button class="btn" id="copyBtn" type="button" aria-live="polite">
+              <svg class="icon" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M16 1H4c-1.1 0-2 .9-2 2v12h2V3h12V1zm3 4H8c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h11c1.1 0 2-.9 2-2V7c0-1.1-.9-2-2-2zm0 16H8V7h11v14z"/></svg>
+              <span id="copyText">Copy</span>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container" style="display:flex; gap:14px; flex-wrap:wrap; align-items:center; justify-content:space-between; padding:18px 0">
+      <div class="muted">© <span id="year"></span> holymeme.com • Rebuilt</div>
+      <div class="row">
+        <a href="#about">About</a>
+        <a href="#mission">Mission</a>
+        <a href="#faq">FAQ</a>
+        <a href="https://x.com" target="_blank" rel="noopener">X</a>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    // Год в футере
+    document.getElementById('year').textContent = new Date().getFullYear();
+
+    // Копирование адреса контракта
+    const btn = document.getElementById('copyBtn');
+    const label = document.getElementById('copyText');
+    btn.addEventListener('click', async () => {
+      const addr = document.getElementById('addr').innerText.trim();
+      try{
+        await navigator.clipboard.writeText(addr);
+        label.textContent = 'Copied';
+        btn.style.background = 'rgba(255,255,255,.1)';
+        setTimeout(()=>{ label.textContent = 'Copy'; btn.style.background=''; }, 1500);
+      }catch(e){
+        label.textContent = 'Failed';
+        setTimeout(()=>{ label.textContent = 'Copy'; }, 1500);
+      }
+    });
+
+    // Улучшение details: меняем символ +/−
+    document.querySelectorAll('details').forEach(d => {
+      d.addEventListener('toggle', () => {
+        const summary = d.querySelector('summary span[aria-hidden="true"]');
+        if(summary) summary.textContent = d.open ? '−' : '+';
+      });
+    });
+  </script>
+</body>
+</html>
